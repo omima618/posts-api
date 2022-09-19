@@ -4,7 +4,7 @@ var contentInp = editForm.querySelector('#content');
 var cancelBtn = document.querySelector('.prev-page');
 
 // get selected post data
-var postId = location.href.slice(location.href.indexOf('=') + 1);
+var postId = location.search.slice(4);
 var request = new XMLHttpRequest();
 request.open('GET', `https://jsonplaceholder.typicode.com/posts/${postId}`);
 request.send();
